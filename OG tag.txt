@@ -1,0 +1,29 @@
+<script>
+    function generateMetaTags() {
+        let title = document.getElementById("title").value;
+        let description = document.getElementById("description").value;
+        let keywords = document.getElementById("keywords").value;
+        let author = document.getElementById("author").value;
+
+        let ogTitle = document.getElementById("ogTitle").value;
+        let ogDescription = document.getElementById("ogDescription").value;
+        let ogImage = document.getElementById("ogImage").value;
+        let ogUrl = document.getElementById("ogUrl").value;
+
+        let metaTags = `
+<meta name="title" content="${title}">
+<meta name="description" content="${description}">
+<meta name="keywords" content="${keywords}">
+<meta name="author" content="${author}">
+
+<!-- Open Graph (OG) Tags -->
+<meta property="og:title" content="${ogTitle}">
+<meta property="og:description" content="${ogDescription}">
+<meta property="og:image" content="${ogImage}">
+<meta property="og:url" content="${ogUrl}">
+<meta property="og:type" content="website">
+        `;
+
+        document.getElementById("metaTagsOutput").value = metaTags;
+    }
+</script>
