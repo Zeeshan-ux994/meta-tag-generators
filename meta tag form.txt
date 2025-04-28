@@ -1,0 +1,25 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Meta Tag Description Tool</title>  
+</head>  
+<body>  
+    <h1>Meta Tag Description Tool</h1>  
+    <form id="metaForm" action="/" method="POST">  
+        <label for="description">Enter Description:</label><br>  
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>  
+        <input type="submit" value="Generate Meta Tag">  
+    </form>  
+
+    <script>  
+        document.getElementById("metaForm").onsubmit = function(e) {  
+            e.preventDefault(); // Prevents actual form submission  
+            const description = document.getElementById("description").value;  
+            alert(`Meta tag created: <meta name="description" content="${description}">`);  
+            // Here you can further process the input as required  
+        };  
+    </script>  
+</body>  
+</html>  
